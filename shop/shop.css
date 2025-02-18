@@ -1,0 +1,501 @@
+
+:root {
+	--text-color: #11161e;
+	--3d-primary-color: #151a32;
+	--comon-colot: #fff;
+	--1st-primary-color: #ff6f61;
+	--paragraph-color: #444;
+	--2nd-primary-color: #ff5645;
+	--background-color: #f1f1f1;
+	--bg: #f1f3f4;
+	--black: #000;
+	--a6aab7: #a6aab7;
+  --font-family: "Josefin Sans", sans-serif;
+  --second-family: "Roboto", sans-serif;
+
+}
+
+body{
+  font-family: var(--second-family);
+  
+}
+
+
+/* =============== CSS COMMON ICONS  ====================*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+ul,ol{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* =============== CSS COMMON END ======================*/
+
+
+
+/* TOP HEADER */
+#top_header {
+  background-color: var(--3d-primary-color);
+}
+#top_header .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#top_header .top .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#top_header .top .text span {
+  cursor: pointer;
+  padding: 12px 4px 8px 0px;
+  color: var(--1st-primary-color);
+}
+#top_header .top .text h4 {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 175%;
+  color: var(--comon-colot);
+  left: 0;
+  margin: 0;
+}
+#top_header .top .text p {
+  color: var(--1st-primary-color);
+  margin: 0;
+  padding-left: 5px;
+}
+#top_header .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#top_header .menu h4 {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 175%;
+  color: var(--comon-colot);
+  padding: 10px 20px;
+  margin: 0;
+}
+#top_header .menu h4::after {
+  content: "";
+  position: absolute;
+  border-right: 2px solid #8c8c8cce;
+  width: 2px;
+  height: 30px;
+  padding-right: 20px;
+}
+
+#top_header .menu .select {
+  cursor: pointer;
+  border: none;
+  background-color: var(--3d-primary-color);
+  color: var(--comon-colot);
+}
+#top_header .icons span a:first-child {
+  color: var(--1st-primary-color);
+  padding-left: 20px;
+}
+#top_header .icons span a {
+  cursor: pointer;
+  display: inline-block;
+  color: var(--comon-colot);
+  padding: 0px 5px 5px 0px;
+  line-height: 0;
+}
+
+/* TOP HEADER END */
+
+/*========= NAV ICONS  ========= */
+#nav .container .collapse ul li{
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 162%;
+  color: var(--text-color);
+  padding: 22.5px;
+}
+#nav .container .collapse ul li:nth-child(1) a{
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 162%;
+  color: var(--1st-primary-color);
+}
+/*========= ICONS START ========= */
+#nav .icons{
+  display: flex;
+  margin: 0;
+  cursor: pointer;
+}
+#nav .icons li{
+  padding: 10px;
+}
+#nav .icons li a{
+  color: var(--3d-primary-color);
+}
+#nav .icons li:last-child{
+  position: relative;
+}
+#nav .icons li:last-child span{
+  background: var(--1st-primary-color);
+  color: var(--bg);
+  position: absolute;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  line-height: 10px;
+  border-radius: 50%;
+  top: 10px;
+  right: 5px;
+}
+#nav .navbar-toggler{
+  border: none;
+}
+
+/*========= ICONS END ========= */
+/*========= OFFCANVAS START ========= */
+#offcanvasRight .offcanvas-body ul{
+  background: var(--1st-primary-color);
+  display: inline-block;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--bg);
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+#offcanvasRight .offcanvas-body li{
+  cursor: pointer;
+  padding: 3px;
+}
+
+/*========= OFFCANVAS END ========= */
+/*========= NAV END ========= */
+/* SEARCH START */
+#search{
+  background-color: var(--black);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease;
+  z-index: 22;
+}
+#search.search_popup_active{
+  opacity: 1;
+  visibility: visible;
+}
+#search .container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+#search .container input,   #search .container button{
+  border: none;
+  padding: 15px 30px;
+  outline: none;
+}
+#search .container input{
+  width: 0px;
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
+  transition: 0.5s;
+}
+#search .container input.increase_input{
+  width: 400px;
+}
+#search .container input::placeholder{
+    color: var(--a6aab7);
+
+}
+#search .container button{
+  background: var(--1st-primary-color);
+  color: var(--background-color);
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+#search .crux{
+  background: var(--2nd-primary-color);
+  border: 3px solid var(--1st-primary-color);
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--background-color);
+  cursor: pointer;
+  transition: 0.4s;
+  line-height: 0;
+}
+#search .crux:hover{
+   background: transparent;
+}
+/* SEARCH END */
+
+/*==== ABOUT US =====*/
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #3e434c;
+  height: 400px;
+}
+#about .text h2 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 121%;
+  text-align: center;
+  color: var(--comon-colot);
+}
+#about .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0px 0px 0px;
+}
+#about .link li a {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 175%;
+  text-align: center;
+  color: var(--comon-colot);
+  text-decoration: none;
+}
+#about .link li a:hover{
+color: var(--1st-primary-color);
+}
+#about .link span {
+  padding: 0px 8px;
+  color: var(--comon-colot);
+}
+/*==== ABOUT US END =====*/
+
+
+/*========= TEAM START ========= */
+#team{
+    padding: 130px 0 0 0;
+  }
+  #team .container {
+    position: relative;
+  
+  }
+  #team .container .item{
+    position: absolute;
+    display: flex;
+    left: 30px;
+  }
+  
+  #team .container h2{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 128%;
+    text-align: center;
+    color: var(--text-color);
+    padding-bottom: 15px;
+  }
+  #team .container .images img{
+    width: 312px;
+    height: 310px;
+  }
+  
+  #team .container .item_2 p{
+    font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+  padding-top: 20px;
+  color: var(--text-color);
+  margin: 0px;
+  }
+  #team .container .item_2 h1{
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    text-align: center;
+    color: var(--1st-primary-color);
+    padding: 5px 0px 11px 0px;
+    margin: 0px;
+  
+  }
+  
+  #team .container .social_icon{
+    display: flex;
+    justify-content: center;
+  }
+  #team .container .social_icon span{
+    display: inline-block;
+    padding: 0 10px 24px 0;
+    transition: 0.3s;
+  }
+  
+  #team .container .social_icon span:nth-child(1):hover{
+    color: var(--1st-primary-color);
+  
+  }
+  #team .container .social_icon span:nth-child(2):hover{
+    color: var(--1st-primary-color);
+  
+  }
+  #team .container .social_icon span:nth-child(3):hover{
+    color: var(--1st-primary-color);
+  
+  }
+  #team .container .social_icon span:nth-child(4):hover{
+    color: var(--1st-primary-color);
+  
+  }
+  
+  #team .container .mask_here_image {
+    position: relative;
+    cursor: pointer;
+    right: 24px;
+    margin-right: 20px;
+    box-shadow: 0px 0px 1px 1px rgba(171, 190, 209, 0.37);
+  
+  }
+  #team .container .images {
+    position: relative;
+  }
+  #team .container .arrow_btn {
+    position: relative;
+  }
+  #team .container .arrow_btn button{
+    border: none;
+  }
+  #team .container .arrow_btn .left span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #team .container .arrow_btn .left {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    left: -21px;
+    top: 220px;
+    outline: 3px solid #828282;
+    border-radius: 50%;
+    color: var(--paragraph-color);
+    transition: 0.3s;
+  }
+  #team .container .arrow_btn .left:hover {
+    background-color: var(--1st-primary-color);
+    color: var(--comon-colot);
+    outline: none;
+  }
+  #team .container .arrow_btn .right span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #team .container .arrow_btn .right {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    right: -23px;
+    top: 220px;
+    outline: 3px solid #828282;
+    border-radius: 50%;
+    color: var(--paragraph-color);
+    transition: 0.3s;
+  }
+  #team .container .arrow_btn .right:hover {
+    background-color: var(--1st-primary-color);
+    color: var(--comon-colot);
+    outline: none;
+  }
+  
+  /*========= TEAM END ========= */
+  
+  
+  
+  
+  /*========= INSTAGRAM START ========= */
+  #instagram {
+    padding-top: 600px;
+  }
+  #instagram .container h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 128%;
+    color: var(--text-color);
+    margin-bottom: 40px;
+  }
+  
+  #instagram .row .contant{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #instagram .row .contant div{
+  padding: 2px;
+  cursor: pointer;
+  }
+  #instagram .row .contant a{
+    display: inline-block;
+    position: relative;
+  }
+  #instagram .row .contant img{
+    width: 200px;
+    height: 200px;
+  }
+  
+  #instagram .test{
+    display: flex;
+    position: absolute;
+    left: 46%;
+    transform: translateY(50%);
+    bottom: -16px;
+    padding: 0;
+  }
+  #instagram .test li button{
+    width: 10px;
+    height: 6px;
+    color: transparent;
+    border: none;
+    margin-right: 10px;
+    border-radius: 5px;
+    background: #bdbdbd;
+  }
+  #instagram .test .slick-active button{
+    width: 30px;
+    background: var(--1st-primary-color);
+  }
+  /*========= INSTAGRAM END ========= */

@@ -1,0 +1,230 @@
+
+:root {
+	--text-color: #11161e;
+	--3d-primary-color: #151a32;
+	--comon-colot: #fff;
+	--1st-primary-color: #ff6f61;
+	--paragraph-color: #444;
+	--2nd-primary-color: #ff5645;
+	--background-color: #f1f1f1;
+	--bg: #f1f3f4;
+	--black: #000;
+	--a6aab7: #a6aab7;
+  --font-family: "Josefin Sans", sans-serif;
+  --second-family: "Roboto", sans-serif;
+
+}
+
+body{
+  font-family: var(--second-family);
+  
+}
+
+
+/* =============== CSS COMMON ICONS  ====================*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+ul,ol{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* =============== CSS COMMON END ======================*/
+
+/* TOP HEADER */
+#top_header {
+    background-color: var(--3d-primary-color);
+  }
+  #top_header .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #top_header .top .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #top_header .top .text span {
+    cursor: pointer;
+    padding: 12px 4px 8px 0px;
+    color: var(--1st-primary-color);
+  }
+  #top_header .top .text h4 {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    color: var(--comon-colot);
+    left: 0;
+    margin: 0;
+  }
+  #top_header .top .text p {
+    color: var(--1st-primary-color);
+    margin: 0;
+    padding-left: 5px;
+  }
+  #top_header .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #top_header .menu h4 {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    color: var(--comon-colot);
+    padding: 10px 20px;
+    margin: 0;
+  }
+  #top_header .menu h4::after {
+    content: "";
+    position: absolute;
+    border-right: 2px solid #8c8c8cce;
+    width: 2px;
+    height: 30px;
+    padding-right: 20px;
+  }
+  
+  #top_header .menu .select {
+    cursor: pointer;
+    border: none;
+    background-color: var(--3d-primary-color);
+    color: var(--comon-colot);
+  }
+  #top_header .icons span a:first-child {
+    color: var(--1st-primary-color);
+    padding-left: 20px;
+  }
+  #top_header .icons span a {
+    cursor: pointer;
+    display: inline-block;
+    color: var(--comon-colot);
+    padding: 0px 5px 5px 0px;
+    line-height: 0;
+  }
+  
+  /* TOP HEADER END */
+  /*========= NAV ICONS  ========= */
+  #nav .container .collapse ul li{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    color: var(--text-color);
+    padding: 22.5px;
+  }
+  #nav .container .collapse ul li:nth-child(1) a{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    color: var(--1st-primary-color);
+  }
+  /*========= ICONS START ========= */
+  #nav .icons{
+    display: flex;
+    margin: 0;
+    cursor: pointer;
+  }
+  #nav .icons li{
+    padding: 10px;
+  }
+  #nav .icons li a{
+    color: var(--3d-primary-color);
+  }
+  #nav .icons li:last-child{
+    position: relative;
+  }
+  #nav .icons li:last-child span{
+    background: var(--1st-primary-color);
+    color: var(--bg);
+    position: absolute;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 10px;
+    border-radius: 50%;
+    top: 10px;
+    right: 5px;
+  }
+  #nav .navbar-toggler{
+    border: none;
+  }
+  
+  /*========= ICONS END ========= */
+  /*========= OFFCANVAS START ========= */
+  #offcanvasRight .offcanvas-body ul{
+    background: var(--1st-primary-color);
+    display: inline-block;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--bg);
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+  }
+  #offcanvasRight .offcanvas-body li{
+    cursor: pointer;
+    padding: 3px;
+  }
+  
+  /*========= OFFCANVAS END ========= */
+  /*========= NAV END ========= */
+  /*==== ABOUT US =====*/
+  #about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #3e434c;
+    height: 400px;
+  }
+  #about .text h2 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 121%;
+    text-align: center;
+    color: var(--comon-colot);
+  }
+  #about .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0px 0px 0px;
+  }
+  #about .link li a {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    text-align: center;
+    color: var(--comon-colot);
+    text-decoration: none;
+  }
+  #about .link li a:hover{
+  color: var(--1st-primary-color);
+  }
+  #about .link span {
+    padding: 0px 8px;
+    color: var(--comon-colot);
+  }
+  /*==== ABOUT US END =====*/
